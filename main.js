@@ -70,5 +70,17 @@ document.addEventListener('DOMContentLoaded', () => {
         } )
     }
 
+    function renderizarCarrito() {
+        // vaciamos el carrito desde el inicio
+        DOMcarrito.textContent = ''
+        // eliminamos los duplicados
+
+        // 'hola' + 'Adios' = 'holaAdios'
+        // const pollitos = ['Pollitos']
+        // const nombres = ['nombres']
+        // const nuevoArreglo = [...pollitos, ...nombres] // ['Pollitos', 'nombres']
+        const carritoSinDuplicados = [...new Set(carrito)]
+    }
+
     renderizarProductos()
 })
